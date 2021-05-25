@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS crud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="py-5">
+    <div class="container">
+        <button id="add" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-modal">Add
+            new</button>
+        <table class="table mt-5 table-success table-striped">
+            <thead>
+                <tr>
+                    <th>Numeris:</th>
+                    <th>Greitis:</th>
+                    <th>Laikas</th>
+                    <th>Data</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="table">
+
+            </tbody>
+        </table>
+
+    </div>
+    <!-- Delete modal -->
+    <!-- Button trigger modal -->
+    <div class="modal fade" id="delete-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Are You sure?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="delete-submit" type="button" class="btn btn-primary"
+                        data-bs-dismiss="modal">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Prideti modal -->
+    <div class="modal fade" id="add-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="add-form" action="">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <input type="text" required class="form-control" id="number" placeholder="Numeris">
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" required class="form-control" id="speed" placeholder="Greitis">
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" required class="form-control" id="time" placeholder="Laikas">
+                        </div>
+                        <div class="mb-3">
+                            <input type="date" required class="form-control" id="date" placeholder="Data">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="add-submit" type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Edit modal -->
+    <div class="modal fade" id="edit-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="edit-form" action="">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <input type="text" required class="form-control" id="number-edit" placeholder="Numeris">
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" required class="form-control" id="speed-edit" placeholder="Greitis">
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" required class="form-control" id="time-edit" placeholder="Laikas">
+                        </div>
+                        <div class="mb-3">
+                            <input type="date" required class="form-control" id="date-edit" placeholder="Data">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="edit-submit" type="submit" class="btn btn-primary">Edit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Scripta dedam i failo apacia, pries uzsidarant body tagui -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
